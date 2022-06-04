@@ -1,0 +1,12 @@
+@import "./sidebar.css";
+
+html {
+    font-size: 62.5%;
+    font-family: roboto, Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template: 20% 1fr / 20% 1fr;
+}
