@@ -1,0 +1,124 @@
+
+
+.content {
+    --width-ascent-line: 1rem;
+
+    grid-area: content;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    display: grid;
+    grid-template-areas: "projects announcements"
+                         "projects trending";
+    gap: 1.5rem;
+    background-color: #E2E8F0;
+}
+
+.content h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.content section {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    gap: 1rem;
+}
+
+.content .projects {
+    grid-area: projects;
+}
+
+.content .projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(15rem, 1fr));
+    height: fit-content;
+    gap: 2rem;
+}
+
+.content .projects .project-grid .project {
+    background-color: white;
+    border-radius: var(--width-ascent-line);
+    padding-left: calc(var(--width-ascent-line) + 1.5rem);
+    padding-right: 1.5rem;
+    position: relative;
+    display: grid;
+    grid-template-rows: min-content min-content 1fr;
+}
+
+.content .projects .project-grid .project::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    background-color: #F0B429;
+    width: var(--width-ascent-line);
+    height: 100%;
+    border-radius: var(--width-ascent-line) 0 0 var(--width-ascent-line);
+}
+
+.content .projects .project-grid .project .title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+.content .projects .project-grid .project .description {
+    font-size: 1.2rem;
+}
+
+.content .projects .project-grid .project .actions {
+    place-self: end end;
+    padding: 2rem 1.5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.content .projects .project-grid .project .actions li {
+    width: 2rem;
+    height: 2rem;
+}
+.content .projects .project-grid .project .actions a {
+    display: block;
+    line-height: 2rem;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.content .announcements {
+    grid-area: announcements;
+    display: grid;
+}
+
+.content .announcements .announcement-board {
+    background-color: white;
+    border-radius: var(--width-ascent-line);
+    padding: 2rem 1rem;
+    width: 18rem;
+}
+
+.content .announcements .announcement-board .announcement {
+    padding-bottom: 2rem;
+    border-bottom: solid 1px #E2E8F0;
+}
+
+.content .announcements .announcement-board .announcement .title {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.content .announcements .announcement-board .announcement .description {
+    font-size: 1.1rem;
+}
+
+.content .trending {
+    grid-area: trending;
+}
+
+@media (hover: hover) {
+    .content .projects .project-grid .project .actions a:hover {
+        font-size: 1.7rem;
+    }
+}
