@@ -1,0 +1,124 @@
+.top-bar {
+    grid-area: top-bar;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 6px 4.5px 0 #ddd;
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template-areas: "search info"
+                         "welcome actions";
+}
+
+.top-bar .search {
+    grid-area: search;
+    padding-top: 0.8rem;
+}
+
+.top-bar .search button {
+    padding: 0;
+    font-size: 1.4rem;
+    width: 3rem;
+    text-align: left;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.top-bar .search input {
+    padding: 0 1rem;
+    height: 2rem;
+    width: calc(100% - 6rem);
+    font-size: 1.4rem;
+    background-color: #E2E8F0;
+    border: none;
+    border-radius: 10rem;
+}
+
+.top-bar .info {
+    grid-area: info;
+    padding-top: 0.3rem;
+    font-size: 1.4rem;
+    place-self: start end;
+    display: flex;
+}
+
+.top-bar .info i {
+    font-size: 1.6rem;
+    margin-right: 2rem;
+}
+
+.top-bar .info a {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.top-bar .info img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 2rem;
+    border-radius: 50%;
+}
+
+.top-bar .welcome {
+    grid-area: welcome;
+    display: grid;
+    column-gap: 2rem;
+    grid-template: 3rem 3rem / 6rem 1fr;
+    grid-template-areas: "profile-img welcome-msg"
+                         "profile-img user-name";
+    align-items: center;
+}
+
+.top-bar .welcome .welcome-msg {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.top-bar .welcome .user-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    place-self: start start;
+}
+
+.top-bar .welcome img {
+    grid-area: profile-img;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+.top-bar .welcome .welcome-msg {
+    grid-area: welcome-msg;
+}
+
+.top-bar .actions {
+    grid-area: actions;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar .actions a {
+    background-color: #3992D5;
+    color: white;
+    width: 4rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    border-radius: 99rem;
+}
+
+@media (hover: hover) {
+    .top-bar .actions a:hover {
+        box-shadow: 3px 3px 9.5px 0 #3992d5;
+        font-size: 1.25rem;
+    }
+} 

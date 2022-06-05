@@ -1,5 +1,5 @@
-@import "./sidebar.css";
-@import "./topbar.css";
+@import "./side-bar.css";
+@import "./top-bar.css";
 
 html {
     font-size: 62.5%;
@@ -9,9 +9,9 @@ html {
 body {
     min-height: 100vh;
     display: grid;
-    grid-template: 20% 1fr / minmax(min-content, 20rem) 1fr;
-    grid-template-areas: "sidebar topbar"
-                         "sidebar content";
+    grid-template: minmax(min-content, 20%) 1fr / minmax(min-content, 20rem) 1fr;
+    grid-template-areas: "side-bar top-bar"
+                         "side-bar content";
 }
 
 .sr-only:not(:focus):not(:active) {

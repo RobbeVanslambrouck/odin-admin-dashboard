@@ -16,7 +16,7 @@
     />
   </head>
   <body>
-    <header class="sidebar">
+    <header class="side-bar">
       <h1>
         <a href="#">
           <i class="fa-solid fa-chalkboard-user"></i>
@@ -85,19 +85,30 @@
       </nav>
     </header>
     <div class="top-bar">
-      <form action="#" method="get">
-        <button type="submit">search</button>
-        <label for="search-bar">search for:</label>
+      <form action="#" method="get" class="search">
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <label for="search-bar" class="sr-only">search</label>
         <input id="search-bar" type="text" />
       </form>
-      <a href="#">notifications</a>
-      <a href="#"><img src="#" alt="profiel picture" />my profile</a>
-      <img src="#" alt="profile picture" />
-      <p>Hi there</p>
-      <p>my fullname (@user-name)</p>
-      <a href="#">new</a>
-      <a href="#">upload</a>
-      <a href="#">share</a>
+      <div class="info">
+        <a href="#"><i class="fa-regular fa-bell"></i></a>
+        <a href="#">
+          <img src="./assets/images/avatar1.jpeg" alt="profiel picture" />
+          <p>my profile</p>
+        </a>
+      </div>
+      <div class="welcome">
+        <img src="./assets/images/avatar1.jpeg" alt="profiel picture" />
+        <p class="welcome-msg">Hi there,</p>
+        <p class="user-name">my fullname (@user-name)</p>
+      </div>
+      <div class="actions">
+        <a href="#">new</a>
+        <a href="#">upload</a>
+        <a href="#">share</a>
+      </div>
     </div>
     <main>
       <section>
