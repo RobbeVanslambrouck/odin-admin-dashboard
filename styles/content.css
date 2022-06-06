@@ -95,13 +95,17 @@
 .content .announcements .announcement-board {
     background-color: white;
     border-radius: var(--width-ascent-line);
-    padding: 2rem 1rem;
+    padding: 0 1rem;
     width: 18rem;
 }
 
 .content .announcements .announcement-board .announcement {
-    padding-bottom: 2rem;
+    padding: 2rem 0;
     border-bottom: solid 1px #E2E8F0;
+}
+
+.content .announcements .announcement-board .announcement:last-child {
+    border: none;
 }
 
 .content .announcements .announcement-board .announcement .title {
@@ -115,6 +119,45 @@
 
 .content .trending {
     grid-area: trending;
+}
+
+.content .trending .trending-board {
+    background-color: white;
+    border-radius: var(--width-ascent-line);
+    padding: 0 1rem;
+}
+
+.content .trending .trending-board .trending-item {
+    display: grid;
+    column-gap: 1rem;
+    grid-template-columns: 4rem 1fr;
+    grid-template-areas: "profile-img user-name"
+                         "profile-img project";
+    padding: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.content .trending .trending-board .trending-item img {
+    grid-area: profile-img;
+    width: 4rem;
+    height: 4rem;
+}
+
+.content .trending .trending-board .trending-item .user-name {
+    place-self: end start;
+}
+
+.content .trending .trending-board .trending-item .project {
+    place-self: start start;
+    text-transform: capitalize;
+    color: #555555;
+}
+
+.content .trending .trending-board .trending-item img {
+    grid-area: profile-img;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
 }
 
 @media (hover: hover) {
